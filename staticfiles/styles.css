@@ -1,0 +1,376 @@
+:root {
+    font-size: 18px;
+    font-family: 'Mulish', sans-serif;
+    color: #000;
+    --main-color: #110B56;
+    --secondary-color: #8695a0;
+    --border-color: #ebebff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; color: #000; }
+
+ul { list-style: none; }
+
+
+.section {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+    display: flex;
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.nav-item {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    padding: 0.3rem 0.5rem;
+    color: var(--main-color);
+}
+
+.featured {
+    background-color: var(--main-color);
+    color: var(--border-color);
+    font-weight: 600;
+    border-radius: 1rem;
+}
+
+
+.jumbotron {
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.intro-msg-block {
+    margin-top: 1.6rem;
+    padding: 1rem;
+    width: 40%;
+    margin-right: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+
+.intro-msg-block > h1 {
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.intro-msg-block > p {
+    display: inline-block;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.brief-stats {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem 1rem 1rem;
+    width: 40%;
+} 
+
+.brief-stat-item {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.brief-stat-item > h2 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.brief-stat-item > p {
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+}
+
+
+.page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-content {
+    width: 73%;
+}
+
+.semi-section {
+    width: 100%;
+    padding: 1rem;
+}
+
+
+.search-input {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem; 
+    width: 80%;
+}
+
+.search-input::placeholder {
+    color: var(--secondary-color);
+    font-family: 'Mulish', sans-serif;
+}
+
+
+.filters-section {
+    width: 25%;
+    margin-top: 1rem;
+}
+
+.filter-box {
+    padding: 1rem 1rem 0 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.section-heading {
+    font-size: 0.8rem;
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0; 
+}
+
+.filter-item {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--border-color); 
+    border-radius: 1rem;
+    color: var(--main-color);
+    transition: all 0.1s ease-in;
+}
+
+
+.filter-item:hover {
+    background-color: var(--main-color);
+    color: var(--border-color);
+}
+
+
+/* Consultant card */
+.cons-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.cons-card {
+    width: 22%;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    color: var(--main-color);
+    transition: all 0.1s ease-in-out;
+}
+
+.cons-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 3px -2px rgb(0 0 0 / 50%)
+}
+
+.cons-card-img {
+    margin: 0 auto 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.cons-card-img > img {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.cons-name {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cons-name > h3 {
+    font-size: 0.7rem;
+}
+
+.cons-name > p {
+    text-align: center;
+    font-size: 0.5rem;
+    margin: 0.5rem auto;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--border-color);
+    color: var(--main-color);
+    font-weight: 600;
+    width: fit-content;
+    border-radius: 1rem;
+}
+
+.cons-brief-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.brief-info-item {
+    width: 30%;
+    text-align: center;
+}
+
+.brief-info-item > h3 {
+    font-size: 0.7rem;
+}
+
+.brief-info-item > p {
+    font-size: 0.6rem;
+}
+
+
+/* Daily hint */
+.daily-hint {
+    background-color: var(--border-color);
+}
+
+.daily-hint-text {
+    font-size: 0.7rem;
+}
+
+
+/* Consultant details */
+.consultant-page {
+    margin-top: 2rem;
+}
+
+.consultant-brief {
+    padding: 1rem;
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.consultant-avatar {
+    width: 15%;
+    border-right: 1px solid var(--border-color);
+    padding-right: 1rem;
+    margin-right: 1rem;
+}
+
+.consultant-avatar > img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.consultant-info {
+    padding: 1rem 1.5rem 0 1.5rem; 
+    margin-right: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 0.8rem;
+}
+
+.consultant-name {
+    font-size: 1.5rem;  
+    margin-bottom: 1.5rem;
+}
+
+.consultant-misc {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.consultant-bg {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.consultant-bg > p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.consultant-brief-heading {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.consultant-bg-items {
+    display: flex;
+}
+
+.consultant-bg-item {
+    margin-right: 1rem;
+}
+
+.general-info {
+    width: 60%;
+}
+
+.comments {
+    width: 38%;
+}
+
+.consultant-bg-item:last-of-type {
+    margin-right: 0;
+}
+
+.comment-item {
+    background-color: #f9f9f9;
+    border-radius: 0.8rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.comment-author {
+    font-size: 0.8rem;
+}
+
+.comment-text {
+    font-size: 0.7rem;
+}
+
+.comps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comp {
+    padding: 0.3rem 0.7rem;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #f9f9f9;
+}

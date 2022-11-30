@@ -1,0 +1,166 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="section page">
+        
+        <div class="page-content consultant-page">
+            <section class="semi-section consultant">
+                <h1 class="consultant-name">{{ consultant }}</h1>
+                <div class="consultant-brief">
+                    <div class="consultant-avatar">
+                        {% if consultant.image %}
+                            <img src="{{ consultant.image.url }}" alt="">
+                        {% else %}
+                            <img src="{% static 'avatar.png'%}" alt="User avatar">
+                        {% endif %}
+                    </div>  
+                    
+                    <div class="consultant-info">
+                        <p class="consultant-misc">{{ consultant.spheres.all.first }}</p>
+                        <p class="consultant-misc">{{ consultant.phone }}</p>
+                        <p class="consultant-misc">{{ consultant.email }}</p>
+                    </div>
+
+                    <div class="consultant-info">
+                        <p class="consultant-misc">{{ consultant.age }} years old</p>
+                        <p class="consultant-misc">{{ consultant.sex }}</p>
+                    </div>
+
+                    <div class="consultant-info">
+                        <p class="consultant-misc">Hired 15 times </p>
+                        <p class="consultant-misc">Average rating is 8.6</p>
+                    </div>
+                </div>
+                <div class="consultant-bg-items">
+                    <div class="consultant-bg-item general-info">
+                        <div class="consultant-bg">
+                            <h2 class="consultant-brief-heading">Expertise</h2>
+                            <div class="comps">
+                                {% for comp in consultant.competences.all %}
+                                    <a class="comp" href="/">{{ comp }}</a>
+                                {% endfor %}
+                            </div>
+                            <p>{{ consultant.competence }}</p>
+                        </div>
+
+                        {% if consultant.education %}
+                            <div class="consultant-bg">
+                                <h2 class="consultant-brief-heading">Education</h2>
+                                <p>{{ consultant.education }}</p>
+                            </div>
+                        {% endif %}
+                        
+                        {% if consultant.experience %}
+                            <div class="consultant-bg">
+                                <h2 class="consultant-brief-heading">Experience</h2>
+                                <p>{{ consultant.experience }}</p>
+                            </div>
+                        {% endif %}
+
+                        <div class="consultant-bg">
+                            <h2 class="consultant-brief-heading">Languages</h2>
+                            <div class="comps">
+                                {% for lang in consultant.languages.all %} 
+                                    <a class="comp" href="/">{{ lang }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="consultant-bg">
+                            <h2 class="consultant-brief-heading">Tasks completed</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam excepturi repellat mollitia est, tempore esse distinctio impedit nostrum deleniti libero? Ex dolorem delectus officia esse nihil eos asperiores iure odio.</p>
+                        </div>
+                    </div>
+
+                    <div class="consultant-bg-item comments">
+                        <div class="consultant-bg">
+                            <h2 class="consultant-brief-heading">Comments</h2>
+                            <div class="comment-item">
+                                <h3 class="comment-author">Akmal Saidov</h3>
+                                <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat possimus distinctio in aut exercitationem rem molestiae fugiat labore! Quas magni nobis libero enim. </p>
+                            </div>
+
+                            <div class="comment-item">
+                                <h3 class="comment-author">Akmal Saidov</h3>
+                                <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat possimus distinctio in aut exercitationem rem molestiae fugiat labore! Quas magni nobis libero enim. </p>
+                            </div>
+
+                            <div class="comment-item">
+                                <h3 class="comment-author">Akmal Saidov</h3>
+                                <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat possimus distinctio in aut exercitationem rem molestiae fugiat labore! Quas magni nobis libero enim. </p>
+                            </div>
+
+                            <div class="comment-item">
+                                <h3 class="comment-author">Akmal Saidov</h3>
+                                <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat possimus distinctio in aut exercitationem rem molestiae fugiat labore! Quas magni nobis libero enim. </p>
+                            </div>
+
+                            <div class="comment-item">
+                                <h3 class="comment-author">Akmal Saidov</h3>
+                                <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellat possimus distinctio in aut exercitationem rem molestiae fugiat labore! Quas magni nobis libero enim. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="filters-section">
+            <div class="filter-box daily-hint">
+                <h2 class="section-heading">Daily hint</h2>
+                <div class="filter-list">
+                    <p class="daily-hint-text">Consider hiring the consultants with extended professional background</p>
+                </div>
+            </div>
+            
+            <div class="filter-box">
+                <h2 class="section-heading">Sphere</h2>
+                <div class="filter-list">
+                    <a class="filter-item" href="/">Agriculture</a>
+                    <a class="filter-item" href="/">IT</a>
+                    <a class="filter-item" href="/">Law</a>
+                    <a class="filter-item" href="/">Gender issues</a>
+                    <a class="filter-item" href="/">Social protection</a>
+                    <a class="filter-item" href="/">Economy</a>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <h2 class="section-heading">Competence</h2>
+                <div class="filter-list">
+                    <a class="filter-item" href="/">Agriculture</a>
+                    <a class="filter-item" href="/">IT</a>
+                    <a class="filter-item" href="/">Law</a>
+                    <a class="filter-item" href="/">Gender issues</a>
+                    <a class="filter-item" href="/">Social protection</a>
+                    <a class="filter-item" href="/">Economy</a>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <h2 class="section-heading">Competence</h2>
+                <div class="filter-list">
+                    <a class="filter-item" href="/">Agriculture</a>
+                    <a class="filter-item" href="/">IT</a>
+                    <a class="filter-item" href="/">Law</a>
+                    <a class="filter-item" href="/">Gender issues</a>
+                    <a class="filter-item" href="/">Social protection</a>
+                    <a class="filter-item" href="/">Economy</a>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <h2 class="section-heading">Competence</h2>
+                <div class="filter-list">
+                    <a class="filter-item" href="/">Agriculture</a>
+                    <a class="filter-item" href="/">IT</a>
+                    <a class="filter-item" href="/">Law</a>
+                    <a class="filter-item" href="/">Gender issues</a>
+                    <a class="filter-item" href="/">Social protection</a>
+                    <a class="filter-item" href="/">Economy</a>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

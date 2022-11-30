@@ -1,0 +1,244 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="section page">
+        
+        <div class="page-content">
+            <section class="semi-section">
+                <div class="search-box">
+                    <input class="search-input" type="text" placeholder="Search for consultants...">
+                </div>
+            </section>
+
+            <section class="semi-section">
+                <h2 class="section-heading">Mostly viewed consultants</h2>
+                
+                
+                {% if consultants %} 
+                    <div class="cons-cards">
+                        {% for con in consultants %}
+                            <a href="{{ con.get_absolute_url }}" class="cons-card">
+                                <div class="cons-card-img">
+                                    {% if con.image %}
+                                        <img src="{{ con.image.url }}" alt="">
+                                    {% else %}
+                                        <img src="{% static 'avatar.png'%}" alt="User avatar">
+                                    {% endif %}
+                                </div>
+                                <div class="cons-name">
+                                    <h3>{{ con }} </h3>
+                                    <p>{{ con.spheres.all.first }}</p>
+                                </div>
+                                
+                                <div class="cons-brief-info">
+                                    <div class="brief-info-item">
+                                        <h3>${{ con.daily_fee }}</h3>
+                                        <p>Daily fee</p>
+                                    </div>
+                                    <div class="brief-info-item">
+                                        <h3>{{ con.age }}</h3>
+                                        <p>Age</p>
+                                    </div>
+                                    <div class="brief-info-item">
+                                        <h3>2</h3>
+                                        <p>x Hired</p>
+                                    </div>
+                                </div> 
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </section>
+
+            <section class="semi-section">
+                <h2 class="section-heading">Recently added consultants</h2>
+                
+                <div class="cons-cards">
+                    <a href="#" class="cons-card">
+                        <div class="cons-card-img">
+                            <img src="{% static 'avatar.png' %}" alt="Face photo">
+                        </div>
+                        <div class="cons-name">
+                            <h3>Bunyod Khoshimkhujaev</h3>
+                            <p>Digital transformation</p>
+                        </div>
+                        
+                        <div class="cons-brief-info">
+                            <div class="brief-info-item">
+                                <h3>$56</h3>
+                                <p>Daily fee</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>35</h3>
+                                <p>Age</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>2</h3>
+                                <p>x Hired</p>
+                            </div>
+                        </div> 
+                    </a>
+
+                    <article class="cons-card">
+                        <div class="cons-card-img">
+                            <img src="{% static 'avatar.png' %}" alt="Face photo">
+                        </div>
+                        <div class="cons-name">
+                            <h3>Bunyod Avliyokulov</h3>
+                            <p>Digital transformation</p>
+                        </div>
+                        
+                        <div class="cons-brief-info">
+                            <div class="brief-info-item">
+                                <h3>$56</h3>
+                                <p>Daily fee</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>35</h3>
+                                <p>Age</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>10</h3>
+                                <p>x Hired</p>
+                            </div>
+                        </div> 
+                    </article>
+
+                    <article class="cons-card">
+                        <div class="cons-card-img">
+                            <img src="{% static 'avatar.png' %}" alt="Face photo">
+                        </div>
+                        <div class="cons-name">
+                            <h3>Rumilya Ergasheva</h3>
+                            <p>Digital transformation</p>
+                        </div>
+                        
+                        <div class="cons-brief-info">
+                            <div class="brief-info-item">
+                                <h3>$56</h3>
+                                <p>Daily fee</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>35</h3>
+                                <p>Age</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>6</h3>
+                                <p>x Hired</p>
+                            </div>
+                        </div> 
+                    </article>
+
+                    <article class="cons-card">
+                        <div class="cons-card-img">
+                            <img src="{% static 'avatar.png' %}" alt="Face photo">
+                        </div>
+                        <div class="cons-name">
+                            <h3>Rumilya Ergasheva</h3>
+                            <p>Digital transformation</p>
+                        </div>
+                        
+                        <div class="cons-brief-info">
+                            <div class="brief-info-item">
+                                <h3>$56</h3>
+                                <p>Daily fee</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>35</h3>
+                                <p>Age</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>3</h3>
+                                <p>x Hired</p>
+                            </div>
+                        </div> 
+                    </article>
+
+                    <article class="cons-card">
+                        <div class="cons-card-img">
+                            <img src="{% static 'avatar.png' %}" alt="Face photo">
+                        </div>
+                        <div class="cons-name">
+                            <h3>Rumilya Ergasheva</h3>
+                            <p>Digital transformation</p>
+                        </div>
+                        
+                        <div class="cons-brief-info">
+                            <div class="brief-info-item">
+                                <h3>$56</h3>
+                                <p>Daily fee</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>35</h3>
+                                <p>Age</p>
+                            </div>
+                            <div class="brief-info-item">
+                                <h3>11</h3>
+                                <p>x Hired</p>
+                            </div>
+                        </div> 
+                    </article>
+                </div>
+            
+            </section>
+        </div>
+
+        <section class="filters-section">
+            <div class="filter-box daily-hint">
+                <h2 class="section-heading">Daily hint</h2>
+                <div class="filter-list">
+                    <p class="daily-hint-text">Consider hiring the consultants with extended professional background</p>
+                </div>
+            </div>
+            
+            <div class="filter-box">
+                <h2 class="section-heading">Spheres</h2>
+                <div class="filter-list">
+                    <a class="filter-item" href="/">Agriculture</a>
+                    <a class="filter-item" href="/">IT</a>
+                    <a class="filter-item" href="/">Law</a>
+                    <a class="filter-item" href="/">Gender issues</a>
+                    <a class="filter-item" href="/">Social protection</a>
+                    <a class="filter-item" href="/">Economy</a>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <h2 class="section-heading">Competences</h2>
+                <div class="filter-list">
+                    <a class="filter-item" href="/">Agriculture</a>
+                    <a class="filter-item" href="/">IT</a>
+                    <a class="filter-item" href="/">Law</a>
+                    <a class="filter-item" href="/">Gender issues</a>
+                    <a class="filter-item" href="/">Social protection</a>
+                    <a class="filter-item" href="/">Economy</a>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <h2 class="section-heading">Languages</h2>
+                <div class="filter-list">
+                    <a class="filter-item" href="/">Agriculture</a>
+                    <a class="filter-item" href="/">IT</a>
+                    <a class="filter-item" href="/">Law</a>
+                    <a class="filter-item" href="/">Gender issues</a>
+                    <a class="filter-item" href="/">Social protection</a>
+                    <a class="filter-item" href="/">Economy</a>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <h2 class="section-heading">Daily fee range</h2>
+                <div class="filter-list">
+                    <a class="filter-item" href="/">$20-$30</a>
+                    <a class="filter-item" href="/">$30-40$</a>
+                    <a class="filter-item" href="/">$40-$50</a>
+                    <a class="filter-item" href="/">$50-%60</a>
+                    <a class="filter-item" href="/">$60-$70</a>
+                    <a class="filter-item" href="/">more than $70</a>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
