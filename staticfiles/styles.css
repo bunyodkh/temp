@@ -141,7 +141,7 @@ ul { list-style: none; }
 
 .filters-section {
     width: 25%;
-    margin-top: 1rem;
+    margin-top: 6.1rem;
 }
 
 .filter-box {
@@ -373,4 +373,45 @@ ul { list-style: none; }
     margin-right: 1rem;
     margin-bottom: 0.5rem;
     background-color: #f9f9f9;
+}
+
+/* add consultant */
+.duplex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.duplex > .semi-section {
+    width: 49%;
+}
+
+
+label {
+    display: inline-block;
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+}
+
+
+.input-field {
+    display: block;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.instructions {
+    background-color: #eee;
+    border-radius: 0.8rem;
+    padding: 1rem;
+}
+
+.instructions-text {
+    width: 90%;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
 }

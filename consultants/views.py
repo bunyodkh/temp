@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 
 from .models import Consultant
+from .forms import ConsultantlForm
 
 
 def index(request):
@@ -19,6 +20,13 @@ def get_consultant(request, *args, **kwargs):
     consultant = get_object_or_404(Consultant, pk=pk)
     context = { 'title': 'Consultant Detail', 'consultant': consultant }
     return render(request, 'consultant.html', context)
+
+
+
+def add_consultant(request):
+    form = ConsultantlForm()
+    context = { 'title': 'Add data on consultant', 'form': form}
+    return render(request, 'add-consultant.html', context)
 
 
 def contibute(request):
